@@ -2,14 +2,16 @@ import cv2
 import supervision as sv
 from rfdetr import RFDETRSmall
 
-model = RFDETRSmall(pretrain_weights="./dog_model/weights.pt")
+model = RFDETRSmall(pretrain_weights="./dog_model_our/weights.pt")
 
 predictor = model.inference(compile=False)
 
 
-image_path = "./dog_model/new_data/1.jpg"
+image_path = "./dog_model_our/new_data/3.jpg"
+# image_path = "./dog_model/new_data/1.jpg"
+# image_path = "./dog_model/raw_dataset/000006.jpg"
 
-detections = predictor.predict(image_path, threshold=0.25)
+detections = predictor.predict(image_path, threshold=0.5)
 
 print("Find objects: ", detections)
 

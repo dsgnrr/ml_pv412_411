@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 1
+names: ['german_dog']
+
+roboflow:
+  workspace: dsgnrrworkspace
+  project: dogmodel-td3es
+  version: 2
+  license: MIT
+  url: https://universe.roboflow.com/dsgnrrworkspace/dogmodel-td3es/dataset/2
